@@ -1,0 +1,2 @@
+hyprland waybar swaync alacritty thunar fuzzel zsh hyprpaper jack carla
+# https://github.com/neovim/neovim
