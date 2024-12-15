@@ -26,8 +26,8 @@ local chunk_config = {
   max_file_size = 1024 * 1024,
   error_sign = true,
   -- animation related
-  duration = 20,
-  delay = 30,
+  duration = 10,
+  delay = 5,
 }
 
 return {

@@ -22,6 +22,7 @@ require("lazy").setup({
 		{ import = "plugins/lsp" },
 		{ import = "plugins/style" },
 		{ import = "plugins/utility" },
+		{ import = "plugins/nvchad" },
 	},
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { "tokyonight" } },
