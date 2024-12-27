@@ -4,10 +4,8 @@
 preload = ~/.config/wallpaper/neon.png
 #preload = ~/.config/wallpaper/sinon.png
 
-wallpaper = eDP-1,~/.config/wallpaper/neon.png
+#wallpaper = DP-1,~/.config/wallpaper/neon.png
 #wallpaper = DP-3,~/.config/wallpaper/neon.png
-#wallpaper = DP-1,~/.config/wallpaper/sinon.png
-#wallpaper = DP-3,~/.config/wallpaper/sinon.png
 
 splash = true
 ipc = off
