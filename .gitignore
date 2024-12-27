@@ -1,0 +1,12 @@
+*
+!.gitignore
+
+!.config/alacritty
+!.config/hypr
+!.config/nvim
+!.config/swaync
+!.config/wallpaper
+!.config/waybar
+
+!.zshrc
+!starship.toml
