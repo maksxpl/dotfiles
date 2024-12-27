@@ -15,7 +15,7 @@ yay -S --needed neovim-git
 sudo pacman -S --needed hyprland hyprpaper waybar swaync
 
 # Programs
-sudo pacman -S --needed thunar fuzzel
+sudo pacman -S --needed thunar fuzzel hyprshot
 
 # Audio tools
 sudo pacman -S --needed jack carla
@@ -36,7 +36,7 @@ echo "Installing Zsh plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
 git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM}/plugins/zsh-autocomplete
-git clone https://github.com/jeffreytse/zsh-bat ${ZSH_CUSTOM}/plugins/zsh-bat
+git clone https://github.com/fdellwing/zsh-bat ${ZSH_CUSTOM}/plugins/zsh-bat
 
 # Reload Zsh configuration
 echo "Reloading Zsh..."
