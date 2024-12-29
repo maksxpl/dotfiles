@@ -4,9 +4,12 @@ local tokyo_colors = require("tokyonight.colors").setup()
 local tokyo_util = require("tokyonight.util")
 
 local function getLen(str, start_pos)
+  if not str or not start_pos then
+    return 0 -- Default to 0 if inputs are invalid
+  end
   local byte = string.byte(str, start_pos)
   if not byte then
-    return nil
+    return 0 -- Safely return 0 instead of nil
   end
   return (byte < 0x80 and 1) or (byte < 0xE0 and 2) or (byte < 0xF0 and 3) or (byte < 0xF8 and 4) or 1
 end
