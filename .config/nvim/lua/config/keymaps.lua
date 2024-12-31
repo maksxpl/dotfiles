@@ -108,6 +108,9 @@ map_api(
   { noremap = true, silent = true, desc = "Rename in visual mode" }
 )
 
+-- toggle
+vim.keymap.set("n", "<leader>t", "<cmd>lua require('alternate-toggler').toggleAlternate()<CR>")
+
 -- multicursor
 local mc = require("multicursor-nvim")
 ---- Add cursors above/below the main cursor.
