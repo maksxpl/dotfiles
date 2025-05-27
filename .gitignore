@@ -14,6 +14,8 @@
 !.config/hypr/*
 !.config/hypr/config
 !.config/hypr/config/*
+!.config/hypr/scripts/
+!.config/hypr/scripts/*
 .config/hypr/hyprpaper.conf
 
 #uhhh
@@ -59,4 +61,5 @@
 
 # extensions/temp files
 *.bak
+*.env
 nohup.out

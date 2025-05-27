@@ -15,10 +15,10 @@ yay -S --needed neovim-git
 sudo pacman -S --needed hyprland hyprpaper waybar swaync
 
 # Programs
-sudo pacman -S --needed thunar fuzzel hyprshot
+sudo pacman -S --needed thunar fuzzel grimblast
 
 # Audio tools
-sudo pacman -S --needed jack carla
+sudo pacman -S --needed easyeffects # https://forum.manjaro.org/t/how-to-make-linux-sound-great/146143
 
 ###
 ### zsh plugins
