@@ -26,4 +26,5 @@
     "pulseaudio",
     "custom/powermenu"
   ],
+  "output": "DP-1"
 }

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-env > /tmp/env.log
-
 # fetch variables from .env
 set -a
 source ~/.config/hypr/scripts/nextcloud.env
