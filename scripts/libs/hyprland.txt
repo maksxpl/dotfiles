@@ -1,0 +1,14 @@
+hyprland
+hypridle
+hyprpaper
+hyprpicker
+
+waybar
+swaync
+quickshell
+
+gnome-keyring
+
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+xdg-utils

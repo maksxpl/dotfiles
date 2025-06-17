@@ -1,0 +1,13 @@
+alsa-firmware
+alsa-plugins
+alsa-utils
+
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+
+wireplumber
+easyeffects
+qpwgraph
+
+

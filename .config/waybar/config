@@ -11,9 +11,9 @@
     "custom/updates",
     "tray",
     "hyprland/window",
-    "custom/vpn"
   ],
   "modules-center": [
+    "custom/vpn",
     "custom/reload_configs",
     "clock",
     "custom/notification",

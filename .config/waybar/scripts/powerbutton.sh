@@ -1,4 +1,5 @@
 #!/usr/bin/lua
+
 local options = {
     [" Lock"] = "swaylock",
     [" Shut down"] = "systemctl poweroff",
@@ -8,39 +9,34 @@ local options = {
     [" Hibernate"] = "systemctl hibernate",
 }
 
--- Create a table to hold sorted options
+-- Create a list of keys for Onagre display
 local sorted_options = {}
-
--- Sort options alphabetically by their keys
-for key, _ in pairs(options) do
+for key in pairs(options) do
     table.insert(sorted_options, key)
 end
 table.sort(sorted_options)
 
--- Create options string
-local options_string = ""
-local length = 0
+-- Build Onagre input in the form: label<TAB>id
+local onagre_input = {}
 for _, key in ipairs(sorted_options) do
-    options_string = options_string .. key .. "\n"
-    length = length + 1
+    table.insert(onagre_input, string.format("%s\t%s", key, key))
 end
-options_string = options_string:sub(1, -2)
 
--- Run fuzzel with sorted options
-local f = assert(
-    io.popen(
-        "echo -e '"
-            .. options_string
-            .. "' | fuzzel -b 000000ff -t ffffffff --dmenu --prompt 'Power menu >'",
-        "r"
-    )
-)
-local s = assert(f:read("*a"))
-s = string.gsub(s, "^%s+", "")
-s = string.gsub(s, "%s+$", "")
-s = string.gsub(s, "[\n]+", " ")
+-- Join with newlines
+local menu_string = table.concat(onagre_input, "\n")
+
+-- Run Onagre in stdin mode and capture selected ID
+local f = assert(io.popen("onagre --stdin --stdin-format=label-id --prompt 'Power menu > '", "w"))
+f:write(menu_string)
 f:close()
 
--- Use the selected option
-os.execute(options[s])
+-- Read the selected value from Onagre's selection file (if using --stdin)
+local selection_file = os.getenv("XDG_RUNTIME_DIR") .. "/onagre-selection"
+local selection = io.open(selection_file, "r")
+local selected = selection and selection:read("*a"):gsub("%s+", "") or ""
+if selection then selection:close() end
 
+-- Run the matched command
+if selected and options[selected] then
+    os.execute(options[selected])
+end

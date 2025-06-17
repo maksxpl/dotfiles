@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="blinks"
 
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 zstyle ':omz:update' mode auto      # update automatically without asking
@@ -23,7 +23,19 @@ plugins=(
     zsh-bat
 )
 
+# terminal
 source $ZSH/oh-my-zsh.sh
 
 export STARSHIP_CONFIG=~/starship.toml
 eval "$(starship init zsh)"
+
+alias ls='exa --icons --color=auto'
+
+# wayland
+export QT_QPA_PLATFORM=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
+export XDG_CURRENT_SESION_TYPE=wayland
+export GDK_BACKEND="wayland,x11"
+export MOZ_ENABLE_WAYLAND=1
+

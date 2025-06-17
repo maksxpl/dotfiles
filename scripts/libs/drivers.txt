@@ -1,0 +1,3 @@
+amd-ucode
+amf-amdgpu-pro
+mesa
