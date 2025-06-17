@@ -18,3 +18,4 @@ yay -Y --devel --save
 cd ~/scripts/libs
 yay -S --needed $(cat yay.txt)
  
+alias ls='exa --icons --color=auto'

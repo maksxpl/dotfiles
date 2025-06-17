@@ -3,6 +3,7 @@ zsh
 thunar
 gparted
 grub-customizer
+exa --icons --color=auto
 
 git
 base-devel
